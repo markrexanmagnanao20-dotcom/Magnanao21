@@ -1,0 +1,148 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+import { ShipConfig, UpgradeOption } from '../types/game';
+
+export const SHIPS: Record<string, ShipConfig> = {
+  valkyrie: {
+    id: 'valkyrie',
+    name: 'Valkyrie Interceptor',
+    role: 'Balanced Strike Craft',
+    description: 'High-mobility tactical fighter with rapid twin plasma blasters and EMP discharge burst.',
+    primaryColor: '#00f0ff',
+    secondaryColor: '#0088ff',
+    accentColor: '#ffffff',
+    stats: {
+      speed: 7.2,
+      health: 100,
+      shield: 50,
+      fireRate: 8.5,
+      damage: 18,
+    },
+    specialName: 'EMP Shockwave',
+    specialDescription: 'Detonates a radial electrostatic shockwave, neutralizing hostile bullets and stunning targets.',
+    imagePath: '/src/assets/images/ship_valkyrie_icon_1791882442579.jpg',
+  },
+  titan: {
+    id: 'titan',
+    name: 'Titan Dreadnought',
+    role: 'Heavy Armored Fortress',
+    description: 'Reinforced durasteel battlecruiser armed with heavy twin railguns and immense shield capacity.',
+    primaryColor: '#f59e0b',
+    secondaryColor: '#ef4444',
+    accentColor: '#fbbf24',
+    stats: {
+      speed: 5.4,
+      health: 160,
+      shield: 90,
+      fireRate: 5.5,
+      damage: 34,
+    },
+    specialName: 'Plasma Siege Barrage',
+    specialDescription: 'Unleashes an explosive 360-degree barrage of heavy plasma shells vaporizing nearby threats.',
+    imagePath: '/src/assets/images/ship_titan_icon_1791882444548.jpg',
+  },
+  chronos: {
+    id: 'chronos',
+    name: 'Chronos Phantasm',
+    role: 'Agile Quantum Prototype',
+    description: 'Experimental speedster utilizing tachyonic propulsion and homing resonance beams.',
+    primaryColor: '#a855f7',
+    secondaryColor: '#6366f1',
+    accentColor: '#ec4899',
+    stats: {
+      speed: 8.8,
+      health: 75,
+      shield: 60,
+      fireRate: 10.0,
+      damage: 15,
+    },
+    specialName: 'Tachyon Time-Warp',
+    specialDescription: 'Slows down cosmic time by 75% for 4 seconds while hyper-boosting your fire rate.',
+  },
+};
+
+export const ALL_UPGRADES: Omit<UpgradeOption, 'currentLevel'>[] = [
+  {
+    id: 'spread_fire',
+    title: 'Plasma Spread Arrays',
+    description: 'Adds +1 diagonal plasma beam projector to your firing pattern.',
+    icon: 'Split',
+    rarity: 'COMMON',
+    maxLevel: 4,
+  },
+  {
+    id: 'fire_rate',
+    title: 'Overcharge Capacitor',
+    description: 'Increases weapon firing rate by 22% and missile cycle rate.',
+    icon: 'Gauge',
+    rarity: 'COMMON',
+    maxLevel: 5,
+  },
+  {
+    id: 'homing_swarm',
+    title: 'Micro-Missile Pods',
+    description: 'Periodically launches seeking micro-missiles that track down enemy targets.',
+    icon: 'Radio',
+    rarity: 'RARE',
+    maxLevel: 3,
+  },
+  {
+    id: 'orbital_drone',
+    title: 'Aegis Defense Drone',
+    description: 'Deploys an automated orbital drone that intercepts bullets and fires laser bursts.',
+    icon: 'ShieldCheck',
+    rarity: 'RARE',
+    maxLevel: 3,
+  },
+  {
+    id: 'piercing_rounds',
+    title: 'Hyper-Density Rail Rounds',
+    description: 'Shots punch straight through hostiles, hitting secondary targets behind them.',
+    icon: 'Target',
+    rarity: 'RARE',
+    maxLevel: 2,
+  },
+  {
+    id: 'grav_magnet',
+    title: 'Graviton Harvester',
+    description: 'Expands energy crystal attraction radius by 60% and increases crystal score value.',
+    icon: 'Magnet',
+    rarity: 'COMMON',
+    maxLevel: 3,
+  },
+  {
+    id: 'nanite_repair',
+    title: 'Nanite Hull Weave',
+    description: 'Restores 35% hull integrity immediately and increases maximum hull by 25 points.',
+    icon: 'Wrench',
+    rarity: 'COMMON',
+    maxLevel: 4,
+  },
+  {
+    id: 'shield_booster',
+    title: 'Flux Capacitor Shielding',
+    description: 'Boosts shield capacity by +30 and accelerates shield recharge speed.',
+    icon: 'Shield',
+    rarity: 'RARE',
+    maxLevel: 3,
+  },
+  {
+    id: 'emp_discharge',
+    title: 'Reactive Electro-Pulse',
+    description: 'Discharges an electric shockwave that damages and pushes back nearby enemies on hit.',
+    icon: 'Zap',
+    rarity: 'EPIC',
+    maxLevel: 3,
+  },
+  {
+    id: 'damage_overdrive',
+    title: 'Antimatter Warheads',
+    description: 'Increases all projectile damage by 30% and adds explosive impact sparks.',
+    icon: 'Flame',
+    rarity: 'EPIC',
+    maxLevel: 4,
+  },
+];

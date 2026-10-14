@@ -1,0 +1,6 @@
+{
+  "name": "Aether Surge: Cosmic Rogue",
+  "description": "An intense, responsive cosmic arcade rogue-lite shooter featuring procedural waves, dynamic upgrades, ship customization, and synthesized retro audio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
